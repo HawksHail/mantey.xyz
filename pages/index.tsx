@@ -2,10 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import styles from "@/styles/Home.module.css";
+import { Container } from "@mui/material";
 
 const Home: NextPage = () => {
 	return (
-		<div className={styles.container}>
+		<Container className={styles.container}>
 			<Head>
 				<title>Zion Mantey</title>
 				<meta name="description" content="Zion's website" />
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
 					<p>I sling plastic bbs at people for fun</p>
 				</section>
 			</div>
-		</div>
+		</Container>
 	);
 };
 
