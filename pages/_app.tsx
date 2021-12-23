@@ -1,12 +1,13 @@
 import type { AppProps } from "next/app";
 
-import "@/styles/globals.css";
+import "../styles/globals.css";
 
 import Head from "next/head";
 
-import Layout from "@/components/Layout";
-import theme from "@/styles/theme";
 import { ThemeProvider } from "@mui/material/styles";
+
+import Layout from "../components/Layout";
+import theme from "../styles/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (

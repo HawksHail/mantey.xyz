@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 
-import Navbar from "@/components/Navbar";
-import Typography from "@mui/material/Typography";
+import { Typography } from "@mui/material";
 
 export default function Layout({ children }: { children: ReactNode }) {
 	return (
