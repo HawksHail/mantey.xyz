@@ -3,9 +3,12 @@ import Toolbar from "@mui/material/Toolbar";
 
 const Navbar = () => {
 	return (
-		<AppBar>
-			<Toolbar>Zion</Toolbar>
-		</AppBar>
+		<>
+			<AppBar>
+				<Toolbar>Zion</Toolbar>
+			</AppBar>
+			<Toolbar />
+		</>
 	);
 };
 
