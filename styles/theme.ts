@@ -1,5 +1,5 @@
-import { createTheme } from "@mui/material/styles";
 import { lightBlue } from "@mui/material/colors";
+import { createTheme } from "@mui/material/styles";
 
 export default createTheme({
 	palette: {

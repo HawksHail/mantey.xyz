@@ -1,10 +1,10 @@
 import type { AppProps } from "next/app";
-import { ThemeProvider } from "@mui/material/styles";
+
+import "@/styles/globals.css";
 
 import Layout from "@/components/Layout";
 import theme from "@/styles/theme";
-
-import "../styles/globals.css";
+import { ThemeProvider } from "@mui/material/styles";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
