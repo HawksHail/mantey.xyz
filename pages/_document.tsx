@@ -20,6 +20,16 @@ class MyDocument extends Document {
 						rel="stylesheet"
 						href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
 					/>
+					<meta
+						name="theme-color"
+						media="(prefers-color-scheme: light)"
+						content="white"
+					/>
+					<meta
+						name="theme-color"
+						media="(prefers-color-scheme: dark)"
+						content="black"
+					/>
 				</Head>
 				<body>
 					<Main />
