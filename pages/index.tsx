@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "@/styles/Home.module.css";
 
 const Home: NextPage = () => {
 	return (
@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 				<meta name="description" content="Zion's website" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className={styles.main}>
+			<div className={styles.slide}>
 				<section className={styles.title}>
 					<h1>Zion Mantey</h1>
 					<ul className={styles.list}>
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 					<p>I play video games</p>
 					<p>I sling plastic bbs at people for fun</p>
 				</section>
-			</main>
+			</div>
 		</div>
 	);
 };
