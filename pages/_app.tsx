@@ -4,6 +4,7 @@ import "../styles/globals.css";
 
 import Head from "next/head";
 
+import { Paper } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 
 import Layout from "../components/Layout";
@@ -19,7 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 				/>
 			</Head>
 			<Layout>
-				<Component {...pageProps} />
+				<Paper square style={{ minHeight: "100vh" }}>
+					<Component {...pageProps} />
+				</Paper>
 			</Layout>
 		</ThemeProvider>
 	);
