@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
 import styles from "../styles/Home.module.css";
 
@@ -15,21 +15,31 @@ const Home: NextPage = () => {
 			</Head>
 			<div className={styles.slide}>
 				<section className={styles.title}>
-					<h1>Zion Mantey</h1>
+					<Typography variant="h1">Zion Mantey</Typography>
 					<ul className={styles.list}>
-						<li>Software Developer</li>
-						<li>Gamer</li>
-						<li>Airsofter</li>
+						<Typography variant="subtitle1" component="li">
+							Software Developer
+						</Typography>
+						<Typography variant="subtitle1" component="li">
+							Gamer
+						</Typography>
+						<Typography variant="subtitle1" component="li">
+							Airsofter
+						</Typography>
 					</ul>
 				</section>
 				<section>
-					<p>Hey, I&apos;m Zion!</p>
-					<p>
+					<Typography variant="body1">Hey, I&apos;m Zion!</Typography>
+					<Typography variant="body1">
 						I write <code>code</code> sometimes
-					</p>
-					<p>I love watching Youtube and movies</p>
-					<p>I play video games</p>
-					<p>I sling plastic bbs at people for fun</p>
+					</Typography>
+					<Typography variant="body1">
+						I love watching Youtube and movies
+					</Typography>
+					<Typography variant="body1">I play video games</Typography>
+					<Typography variant="body1">
+						I sling plastic bbs at people for fun
+					</Typography>
 				</section>
 			</div>
 		</Container>
