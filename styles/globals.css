@@ -8,22 +8,12 @@ body {
 @media (prefers-color-scheme: dark) {
 	html,
 	body {
-		background: #333;
-		color: white;
-	}
-	html,
-	body {
 		background: black;
 		color: #ddd;
 	}
 }
 
 @media (prefers-color-scheme: light) {
-	html,
-	body {
-		background: white;
-		color: #555;
-	}
 	html,
 	body {
 		background: #eee;
