@@ -5,7 +5,9 @@ import { useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import type { ReactNode } from "react";
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+export const ColorModeContext = React.createContext({
+	toggleColorMode: () => {},
+});
 
 export default function ColorMode({ children }: { children: ReactNode }) {
 	const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
