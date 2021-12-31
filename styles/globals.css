@@ -4,19 +4,3 @@ body {
 	margin: 0;
 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
-
-@media (prefers-color-scheme: dark) {
-	html,
-	body {
-		background: #1e1e1e;
-		color: #ddd;
-	}
-}
-
-@media (prefers-color-scheme: light) {
-	html,
-	body {
-		background: #eee;
-		color: black;
-	}
-}
