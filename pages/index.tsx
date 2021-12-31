@@ -1,15 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useContext } from "react";
 
-import { ColorModeContext } from "@/components/ColorThemeProvider";
-import { Button, Container, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-	const { toggleColorMode } = useContext(ColorModeContext);
-
 	return (
 		<Container className={styles.container}>
 			<Head>
@@ -45,9 +41,6 @@ const Home: NextPage = () => {
 						I sling plastic bbs at people for fun
 					</Typography>
 				</section>
-				<Button onClick={toggleColorMode} variant="contained">
-					Toggle dark mode
-				</Button>
 			</div>
 		</Container>
 	);
