@@ -51,7 +51,12 @@ export function ColorModeToggleButton(props: IconButtonProps) {
 	const theme = useTheme();
 
 	return (
-		<IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
+		<IconButton
+			sx={{ ml: 1 }}
+			onClick={toggleColorMode}
+			color="inherit"
+			{...props}
+		>
 			{theme.palette.mode === "dark" ? (
 				<Brightness7Icon />
 			) : (
