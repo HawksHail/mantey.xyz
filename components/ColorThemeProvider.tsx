@@ -1,8 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 
 import { getThemeOptions } from "@/styles/theme";
-import { PaletteMode, useMediaQuery } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import {
+	IconButton,
+	IconButtonProps,
+	PaletteMode,
+	useMediaQuery,
+} from "@mui/material";
+import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
 
 import type { ReactNode } from "react";
 
@@ -36,5 +43,20 @@ export default function ColorMode({ children }: { children: ReactNode }) {
 		<ColorModeContext.Provider value={colorMode}>
 			<ThemeProvider theme={theme}>{children}</ThemeProvider>
 		</ColorModeContext.Provider>
+	);
+}
+
+export function ColorModeToggleButton(props: IconButtonProps) {
+	const { toggleColorMode } = useContext(ColorModeContext);
+	const theme = useTheme();
+
+	return (
+		<IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
+			{theme.palette.mode === "dark" ? (
+				<Brightness7Icon />
+			) : (
+				<Brightness4Icon />
+			)}
+		</IconButton>
 	);
 }
