@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-import { getDesignTokens } from "@/styles/theme";
+import { getThemeOptions } from "@/styles/theme";
 import { PaletteMode, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -26,7 +26,7 @@ export default function ColorMode({ children }: { children: ReactNode }) {
 		[]
 	);
 
-	const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+	const theme = useMemo(() => createTheme(getThemeOptions(mode)), [mode]);
 
 	useEffect(() => {
 		setMode(prefersDarkMode ? "dark" : "light");

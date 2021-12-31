@@ -1,16 +1,21 @@
-import { PaletteMode } from "@mui/material";
-import { lightBlue } from "@mui/material/colors";
+import { PaletteMode, ThemeOptions } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 
-export const getDesignTokens = (mode: PaletteMode) => ({
+export const getThemeOptions = (mode: PaletteMode): ThemeOptions => ({
 	palette: {
 		mode,
 		primary: {
-			main: lightBlue[500],
+			main: "#165fb2",
+		},
+		secondary: {
+			main: "#b26916",
+		},
+		error: {
+			main: "#f44336",
 		},
 	},
 });
 
-export const themeLight = createTheme(getDesignTokens("light"));
-export const themeDark = createTheme(getDesignTokens("dark"));
+export const themeLight = createTheme(getThemeOptions("light"));
+export const themeDark = createTheme(getThemeOptions("dark"));
 export default themeLight;
