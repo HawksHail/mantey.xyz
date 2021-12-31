@@ -3,14 +3,28 @@ import type { AppProps } from "next/app";
 import "../styles/globals.css";
 
 import Head from "next/head";
+import createEmotionCache from "src/createEmotionCache";
 
 import ColorThemeProvider from "@/components/ColorThemeProvider";
 import Layout from "@/components/Layout";
+import { CacheProvider, EmotionCache } from "@emotion/react";
 import { CssBaseline, Paper } from "@mui/material";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const clientSideEmotionCache = createEmotionCache();
+
+interface MyAppProps extends AppProps {
+	emotionCache?: EmotionCache;
+}
+
+function MyApp(props: MyAppProps) {
+	const {
+		Component,
+		emotionCache = clientSideEmotionCache,
+		pageProps,
+	} = props;
+
 	return (
-		<>
+		<CacheProvider value={emotionCache}>
 			<Head>
 				<meta
 					name="viewport"
@@ -25,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 					</Paper>
 				</Layout>
 			</ColorThemeProvider>
-		</>
+		</CacheProvider>
 	);
 }
 

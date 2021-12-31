@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-import themes from "@/styles/theme";
-import { useMediaQuery } from "@mui/material";
+import { getDesignTokens } from "@/styles/theme";
+import { PaletteMode, useMediaQuery } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import type { ReactNode } from "react";
+
 export const ColorModeContext = React.createContext({
 	toggleColorMode: () => {},
 });
@@ -12,7 +13,7 @@ export const ColorModeContext = React.createContext({
 export default function ColorMode({ children }: { children: ReactNode }) {
 	const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
 
-	const [mode, setMode] = useState<"light" | "dark">(
+	const [mode, setMode] = useState<PaletteMode>(
 		prefersDarkMode ? "dark" : "light"
 	);
 
@@ -25,15 +26,7 @@ export default function ColorMode({ children }: { children: ReactNode }) {
 		[]
 	);
 
-	const theme = useMemo(
-		() =>
-			createTheme(themes(mode), {
-				palette: {
-					mode,
-				},
-			}),
-		[mode]
-	);
+	const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
 	useEffect(() => {
 		setMode(prefersDarkMode ? "dark" : "light");
