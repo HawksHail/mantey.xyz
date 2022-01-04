@@ -1,12 +1,11 @@
-import NextLink from "next/link";
 import React, { useState } from "react";
 
+import Link from "@/components/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
 	AppBar,
 	Button,
 	IconButton,
-	Link as MUILink,
 	Menu,
 	MenuItem,
 	Toolbar,
@@ -61,39 +60,34 @@ const Navbar = () => {
 					>
 						{pages.map(page => (
 							<MenuItem key={page} onClick={handleCloseNavMenu}>
-								<NextLink
+								<Link
 									href={`/${page.toLowerCase()}`}
-									passHref
+									textAlign="center"
+									component="a"
+									underline="none"
+									color="inherit"
 								>
-									<MUILink
-										textAlign="center"
-										component="a"
-										underline="none"
-										color="inherit"
-									>
-										{page}
-									</MUILink>
-								</NextLink>
+									{page}
+								</Link>
 							</MenuItem>
 						))}
 					</Menu>
 				</Box>
-				<NextLink href="/" passHref>
-					<MUILink
-						variant="h6"
-						component="a"
-						sx={{
-							flexGrow: { xs: "1", sm: "0" },
-							display: { xs: "flex", sm: "block" },
-							px: "1rem",
-							py: ".5rem",
-						}}
-						underline="none"
-						color="inherit"
-					>
-						Zion
-					</MUILink>
-				</NextLink>
+				<Link
+					href="/"
+					variant="h6"
+					component="a"
+					sx={{
+						flexGrow: { xs: "1", sm: "0" },
+						display: { xs: "flex", sm: "block" },
+						px: "1rem",
+						py: ".5rem",
+					}}
+					underline="none"
+					color="inherit"
+				>
+					Zion
+				</Link>
 				<Box
 					sx={{
 						flexGrow: 1,
@@ -102,10 +96,10 @@ const Navbar = () => {
 					}}
 				>
 					{pages.map(page => (
-						<NextLink
+						<Link
 							key={page}
 							href={`/${page.toLowerCase()}`}
-							passHref
+							underline="none"
 						>
 							<Button
 								sx={{
@@ -117,7 +111,7 @@ const Navbar = () => {
 							>
 								{page}
 							</Button>
-						</NextLink>
+						</Link>
 					))}
 				</Box>
 				<Box sx={{ flexGrow: 0 }}>
