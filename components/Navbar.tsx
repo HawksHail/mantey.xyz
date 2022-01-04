@@ -1,15 +1,15 @@
+import NextLink from "next/link";
 import React, { useState } from "react";
 
-import Link from "@/components/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
 	AppBar,
 	Button,
 	IconButton,
+	Link as MUILink,
 	Menu,
 	MenuItem,
 	Toolbar,
-	Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 
@@ -61,31 +61,39 @@ const Navbar = () => {
 					>
 						{pages.map(page => (
 							<MenuItem key={page} onClick={handleCloseNavMenu}>
-								<Typography textAlign="center">
-									<Link
-										href={`/${page.toLowerCase()}`}
-										color="inherit"
+								<NextLink
+									href={`/${page.toLowerCase()}`}
+									passHref
+								>
+									<MUILink
+										textAlign="center"
+										component="a"
 										underline="none"
+										color="inherit"
 									>
 										{page}
-									</Link>
-								</Typography>
+									</MUILink>
+								</NextLink>
 							</MenuItem>
 						))}
 					</Menu>
 				</Box>
-				<Typography
-					variant="h6"
-					component="div"
-					sx={{
-						flexGrow: { xs: "1", sm: "0" },
-						display: { xs: "flex", sm: "block" },
-					}}
-				>
-					<Link href="/" color="inherit" underline="none">
+				<NextLink href="/" passHref>
+					<MUILink
+						variant="h6"
+						component="a"
+						sx={{
+							flexGrow: { xs: "1", sm: "0" },
+							display: { xs: "flex", sm: "block" },
+							px: "1rem",
+							py: ".5rem",
+						}}
+						underline="none"
+						color="inherit"
+					>
 						Zion
-					</Link>
-				</Typography>
+					</MUILink>
+				</NextLink>
 				<Box
 					sx={{
 						flexGrow: 1,
@@ -94,23 +102,22 @@ const Navbar = () => {
 					}}
 				>
 					{pages.map(page => (
-						<Button
+						<NextLink
 							key={page}
-							sx={{
-								my: 2,
-								color: "white",
-								display: "block",
-								textTransform: "none",
-							}}
+							href={`/${page.toLowerCase()}`}
+							passHref
 						>
-							<Link
-								href={`/${page.toLowerCase()}`}
-								color="inherit"
-								underline="none"
+							<Button
+								sx={{
+									my: 2,
+									color: "white",
+									display: "block",
+									textTransform: "none",
+								}}
 							>
 								{page}
-							</Link>
-						</Button>
+							</Button>
+						</NextLink>
 					))}
 				</Box>
 				<Box sx={{ flexGrow: 0 }}>
