@@ -1,19 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
 
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
 	return (
-		<Container className={styles.container}>
+		<>
 			<Head>
 				<title>Zion Mantey</title>
 				<meta name="description" content="Zion's website" />
-				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className={styles.slide}>
+			<Box className={styles.slide} sx={{ textAlign: "center" }}>
 				<section className={styles.title}>
 					<Typography variant="h1">Zion Mantey</Typography>
 					<ul className={styles.list}>
@@ -41,8 +41,8 @@ const Home: NextPage = () => {
 						I sling plastic bbs at people for fun
 					</Typography>
 				</section>
-			</div>
-		</Container>
+			</Box>
+		</>
 	);
 };
 

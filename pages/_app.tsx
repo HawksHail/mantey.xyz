@@ -8,7 +8,7 @@ import createEmotionCache from "src/createEmotionCache";
 import ColorThemeProvider from "@/components/ColorThemeProvider";
 import Layout from "@/components/Layout";
 import { CacheProvider, EmotionCache } from "@emotion/react";
-import { CssBaseline, Paper } from "@mui/material";
+import { Container, CssBaseline, Paper } from "@mui/material";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -36,7 +36,9 @@ function MyApp(props: MyAppProps) {
 				<CssBaseline />
 				<Paper square style={{ minHeight: "100vh" }}>
 					<Layout>
-						<Component {...pageProps} />
+						<Container className="container">
+							<Component {...pageProps} />
+						</Container>
 					</Layout>
 				</Paper>
 			</ColorThemeProvider>
