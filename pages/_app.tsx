@@ -30,6 +30,7 @@ function MyApp(props: MyAppProps) {
 					name="viewport"
 					content="initial-scale=1, width=device-width"
 				/>
+				<title>Zion Mantey</title>
 			</Head>
 			<ColorThemeProvider>
 				<CssBaseline />
