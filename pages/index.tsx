@@ -13,8 +13,17 @@ const Home: NextPage = () => {
 				<title>Zion Mantey</title>
 				<meta name="description" content="Zion's website" />
 			</Head>
-			<Box className={styles.slide} sx={{ textAlign: "center" }}>
-				<section className={styles.title}>
+			<Box
+				className={styles.slide}
+				sx={{
+					textAlign: "center",
+					height: "80vh",
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "center",
+				}}
+			>
+				<Box sx={{ mb: "2rem" }}>
 					<Typography variant="h1">Zion Mantey</Typography>
 					<ul className={styles.list}>
 						<Typography variant="subtitle1" component="li">
@@ -27,8 +36,8 @@ const Home: NextPage = () => {
 							Airsofter
 						</Typography>
 					</ul>
-				</section>
-				<section>
+				</Box>
+				<Box>
 					<Typography variant="body1">Hey, I&apos;m Zion!</Typography>
 					<Typography variant="body1">
 						I write <code>code</code> sometimes
@@ -40,7 +49,7 @@ const Home: NextPage = () => {
 					<Typography variant="body1">
 						I sling plastic bbs at people for fun
 					</Typography>
-				</section>
+				</Box>
 			</Box>
 		</>
 	);

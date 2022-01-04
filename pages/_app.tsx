@@ -36,7 +36,7 @@ function MyApp(props: MyAppProps) {
 				<CssBaseline />
 				<Paper square style={{ minHeight: "100vh" }}>
 					<Layout>
-						<Container className="container">
+						<Container>
 							<Component {...pageProps} />
 						</Container>
 					</Layout>

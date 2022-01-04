@@ -14,6 +14,11 @@ export const getThemeOptions = (mode: PaletteMode): ThemeOptions => ({
 			main: "#f44336",
 		},
 	},
+	typography: {
+		h1: { fontSize: "3.5rem" },
+		h2: { fontSize: "3rem" },
+		h3: { fontSize: "2.5rem" },
+	},
 });
 
 export const themeLight = createTheme(getThemeOptions("light"));
