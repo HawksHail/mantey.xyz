@@ -63,7 +63,6 @@ const Navbar = () => {
 								<Link
 									href={`/${page.toLowerCase()}`}
 									textAlign="center"
-									component="a"
 									underline="none"
 									color="inherit"
 								>
@@ -76,7 +75,6 @@ const Navbar = () => {
 				<Link
 					href="/"
 					variant="h6"
-					component="a"
 					sx={{
 						flexGrow: { xs: "1", sm: "0" },
 						display: { xs: "flex", sm: "block" },
@@ -92,7 +90,7 @@ const Navbar = () => {
 					sx={{
 						flexGrow: 1,
 						display: { xs: "none", sm: "flex" },
-						ml: "1rem",
+						ml: ".5rem",
 					}}
 				>
 					{pages.map(page => (

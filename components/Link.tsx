@@ -3,11 +3,8 @@ import React from "react";
 
 import { LinkProps as MUILinkProps } from "@mui/material";
 import MUILink from "@mui/material/Link";
-import { MUIStyledCommonProps } from "@mui/system";
 
-export default function Link(
-	props: MUILinkProps & MUIStyledCommonProps & NextLinkProps
-) {
+export default function Link(props: MUILinkProps & NextLinkProps) {
 	return (
 		<NextLink {...props}>
 			<MUILink {...props}>{props.children}</MUILink>
