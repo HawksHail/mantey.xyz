@@ -1,7 +1,10 @@
 import Head from "next/head";
 import React from "react";
 
-import { Grid, Paper, Typography } from "@mui/material";
+import Link from "@/components/Link";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Chip, Grid, IconButton, Paper, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 
 function about() {
 	return (
@@ -22,9 +25,14 @@ function about() {
 				<Grid
 					item
 					xs={12}
-					sx={{ marginTop: { xs: "2rem", sm: "6rem" } }}
+					sx={{ marginTop: { xs: "1rem", sm: "2rem" } }}
 				>
 					<Typography variant="h1">About</Typography>
+					<Typography>
+						Lorem ipsum dolor sit amet consectetur, adipisicing
+						elit. Aliquid praesentium recusandae incidunt non, sit
+						autem id sunt a fugit ad.
+					</Typography>
 				</Grid>
 				<Grid container item spacing={1}>
 					<Grid
@@ -33,17 +41,62 @@ function about() {
 						direction="column"
 						xs={12}
 						sm={4}
+						sx={{ textAlign: "start" }}
 					>
-						<Paper>
-							<Typography variant="h2" mb={2}>
+						<Paper sx={{ padding: 1 }}>
+							<Typography
+								variant="h2"
+								mb={2}
+								sx={{ textAlign: "center" }}
+							>
 								Programming
 							</Typography>
-							<Typography>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Cupiditate quos accusantium
-								expedita reiciendis nemo ratione eius ad
-								repudiandae eligendi corrupti?
+							<Typography pb={1}>
+								Currently at Cognizant as a Fullstack Engineer.
 							</Typography>
+							<Typography pb={1}>
+								Graduated from the University of Texas at Dallas
+								with BS in CS Magna Cum Laude.
+							</Typography>
+							<Typography pb={1}>
+								Started with Java and HTML/CSS in highschool.
+							</Typography>
+							<Grid
+								container
+								item
+								justifyContent="center"
+								spacing={1}
+								pt={1}
+							>
+								<Grid item>
+									<Chip label="Java" />
+								</Grid>
+								<Grid item>
+									<Chip label="Javascript" />
+								</Grid>
+								<Grid item>
+									<Chip label="Typescript" />
+								</Grid>
+								<Grid item>
+									<Chip label="Python" />
+								</Grid>
+								<Grid item>
+									<Chip label="C/C++" />
+								</Grid>
+								<Grid item>
+									<Chip label="HTML5/CSS" />
+								</Grid>
+								<Grid item>
+									<Chip label="MIPS assembly" />
+								</Grid>
+							</Grid>
+							<Box sx={{ textAlign: "center" }}>
+								<Link href="https://github.com/hawkshail">
+									<IconButton>
+										<GitHubIcon />
+									</IconButton>
+								</Link>
+							</Box>
 						</Paper>
 					</Grid>
 					<Grid
