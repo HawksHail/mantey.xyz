@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 				className={styles.slide}
 				sx={{
 					textAlign: "center",
-					height: "80vh",
+					minHeight: "80vh",
 					display: "flex",
 					flexDirection: "column",
 					justifyContent: "center",

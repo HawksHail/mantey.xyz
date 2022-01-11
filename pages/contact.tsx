@@ -20,13 +20,10 @@ function contact() {
 				spacing={2}
 				sx={{
 					textAlign: "center",
+					minHeight: "80vh",
 				}}
 			>
-				<Grid
-					item
-					xs={12}
-					sx={{ marginTop: { xs: "2rem", sm: "6rem" } }}
-				>
+				<Grid item xs={12}>
 					<Typography variant="h1">Contact Me</Typography>
 				</Grid>
 				<Grid
