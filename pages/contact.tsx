@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import Link from "@/components/Link";
 import EmailIcon from "@mui/icons-material/Email";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Button, Grid, Typography } from "@mui/material";
@@ -36,14 +37,20 @@ function contact() {
 						</Button>
 					</Grid>
 					<Grid item>
-						<Button
-							variant="contained"
-							color="primary"
-							startIcon={<TwitterIcon />}
+						<Link
 							href="https://twitter.com/messages/compose?recipient_id=399105671"
+							target="_blank"
+							rel="noopener noreferrer"
+							underline="none"
 						>
-							Twitter
-						</Button>
+							<Button
+								variant="contained"
+								color="primary"
+								startIcon={<TwitterIcon />}
+							>
+								Twitter
+							</Button>
+						</Link>
 					</Grid>
 				</Grid>
 			</Box>
