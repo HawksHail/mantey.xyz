@@ -14,7 +14,7 @@ import { Box } from "@mui/system";
 
 import { ColorModeToggleButton } from "./ColorThemeProvider";
 
-const pages = ["Contact"];
+const pages = ["About", "Contact"];
 
 const Navbar = () => {
 	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
