@@ -1,15 +1,7 @@
 import Head from "next/head";
 import React from "react";
 
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import {
-	Accordion,
-	AccordionDetails,
-	AccordionSummary,
-	Grid,
-	Paper,
-	Typography,
-} from "@mui/material";
+import { Grid, Paper, Typography } from "@mui/material";
 
 function about() {
 	return (
