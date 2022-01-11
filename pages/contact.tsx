@@ -11,7 +11,7 @@ function contact() {
 		<>
 			<Head>
 				<title>Contact Me - Zion Mantey</title>
-				<meta name="description" content="About Zion" />
+				<meta name="description" content="Contact Zion" />
 			</Head>
 			<Box
 				sx={{
