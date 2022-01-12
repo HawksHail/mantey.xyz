@@ -38,7 +38,6 @@ function about() {
 					<Grid
 						item
 						component="section"
-						direction="column"
 						xs={12}
 						sm={4}
 						sx={{ textAlign: "start" }}
@@ -99,13 +98,7 @@ function about() {
 							</Box>
 						</Paper>
 					</Grid>
-					<Grid
-						item
-						component="section"
-						direction="column"
-						xs={12}
-						sm={4}
-					>
+					<Grid item component="section" xs={12} sm={4}>
 						<Paper>
 							<Typography variant="h2" mb={2}>
 								Gaming
@@ -118,13 +111,7 @@ function about() {
 							</Typography>
 						</Paper>
 					</Grid>
-					<Grid
-						item
-						component="section"
-						direction="column"
-						xs={12}
-						sm={4}
-					>
+					<Grid item component="section" xs={12} sm={4}>
 						<Paper>
 							<Typography variant="h2" mb={2}>
 								Airsoft
