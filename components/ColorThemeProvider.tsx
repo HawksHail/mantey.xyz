@@ -4,7 +4,12 @@ import { useLocalStorage } from "@/src/hooks/useLocalStorage";
 import themeLight, { themeDark } from "@/styles/theme";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import { IconButton, IconButtonProps, PaletteMode } from "@mui/material";
+import {
+	IconButton,
+	IconButtonProps,
+	PaletteMode,
+	useMediaQuery,
+} from "@mui/material";
 import { ThemeProvider, useTheme } from "@mui/material/styles";
 
 import type { ReactNode } from "react";
@@ -23,7 +28,11 @@ export default function ColorThemeProvider({
 }: {
 	children: ReactNode;
 }) {
-	const [mode, setMode] = useLocalStorage<PaletteMode>("colorMode", "light");
+	const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+	const [mode, setMode] = useLocalStorage<PaletteMode>(
+		"colorMode",
+		prefersDarkMode ? "dark" : "light"
+	);
 
 	const colorMode = useMemo(
 		() => ({
