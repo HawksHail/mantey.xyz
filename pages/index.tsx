@@ -24,7 +24,9 @@ const Home: NextPage = () => {
 				}}
 			>
 				<Box sx={{ mb: "2rem" }}>
-					<Typography variant="h1">Zion Mantey</Typography>
+					<Typography variant="h1" fontWeight={600}>
+						Zion Mantey
+					</Typography>
 					<ul className={styles.list}>
 						<Typography variant="subtitle1" component="li">
 							Software Developer
