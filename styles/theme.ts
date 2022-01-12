@@ -13,6 +13,7 @@ export const getThemeOptions = (mode: PaletteMode): ThemeOptions => ({
 		error: {
 			main: "#f44336",
 		},
+		background: { default: mode === "light" ? "#fafafa" : "#0a0a0a" },
 	},
 	typography: {
 		h1: { fontSize: "3.5rem" },
@@ -24,4 +25,5 @@ export const getThemeOptions = (mode: PaletteMode): ThemeOptions => ({
 
 export const themeLight = createTheme(getThemeOptions("light"));
 export const themeDark = createTheme(getThemeOptions("dark"));
+console.log(`themeLight`, themeLight);
 export default themeLight;
