@@ -1,35 +1,59 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+
+import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
+
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
 	return (
-		<div className={styles.container}>
+		<>
 			<Head>
 				<title>Zion Mantey</title>
 				<meta name="description" content="Zion's website" />
-				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className={styles.slide}>
-				<section className={styles.title}>
-					<h1>Zion Mantey</h1>
+			<Box
+				className={styles.slide}
+				sx={{
+					textAlign: "center",
+					minHeight: "80vh",
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "center",
+				}}
+			>
+				<Box sx={{ mb: "2rem" }}>
+					<Typography variant="h1" fontWeight={600}>
+						Zion Mantey
+					</Typography>
 					<ul className={styles.list}>
-						<li>Software Developer</li>
-						<li>Gamer</li>
-						<li>Airsofter</li>
+						<Typography variant="subtitle1" component="li">
+							Software Developer
+						</Typography>
+						<Typography variant="subtitle1" component="li">
+							Gamer
+						</Typography>
+						<Typography variant="subtitle1" component="li">
+							Airsofter
+						</Typography>
 					</ul>
-				</section>
-				<section>
-					<p>Hey, I&apos;m Zion!</p>
-					<p>
+				</Box>
+				<Box>
+					<Typography variant="body1">Hey, I&apos;m Zion!</Typography>
+					<Typography variant="body1">
 						I write <code>code</code> sometimes
-					</p>
-					<p>I love watching Youtube and movies</p>
-					<p>I play video games</p>
-					<p>I sling plastic bbs at people for fun</p>
-				</section>
-			</div>
-		</div>
+					</Typography>
+					<Typography variant="body1">
+						I love watching Youtube and movies
+					</Typography>
+					<Typography variant="body1">I play video games</Typography>
+					<Typography variant="body1">
+						I sling plastic bbs at people for fun
+					</Typography>
+				</Box>
+			</Box>
+		</>
 	);
 };
 

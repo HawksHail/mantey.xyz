@@ -1,38 +1,20 @@
-.container {
-	padding: 4rem 2rem;
-	min-height: 100vh;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-.slide {
-	animation: slide 0.6s ease;
-	animation-fill-mode: forwards;
-}
-
-.title {
-	margin-bottom: 2rem;
-}
-
-.title h1 {
-	font-size: 3rem;
-	margin-bottom: 0.5rem;
-}
-
 .list {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
+	justify-content: center;
 }
 
 .list li {
 	flex-direction: row;
 	padding: 0.2rem 1rem;
+}
+
+.slide {
+	will-change: transform;
+	animation: slide 0.6s ease;
+	animation-fill-mode: forwards;
 }
 
 @keyframes slide {
