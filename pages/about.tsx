@@ -41,19 +41,9 @@ function about() {
 					</Typography>
 				</Grid>
 				<Grid container item spacing={1}>
-					<Grid
-						item
-						component="section"
-						xs={12}
-						sm={4}
-						sx={{ textAlign: "start" }}
-					>
+					<Grid item component="section" xs={12} sm={4}>
 						<Paper sx={{ padding: 1 }}>
-							<Typography
-								variant="h2"
-								mb={2}
-								sx={{ textAlign: "center" }}
-							>
+							<Typography variant="h2" mb={2}>
 								Programming
 							</Typography>
 							<Container sx={{ px: 2 }}>
@@ -95,7 +85,7 @@ function about() {
 									<Chip label="MIPS assembly" />
 								</Grid>
 							</Grid>
-							<Box sx={{ textAlign: "center" }}>
+							<Box>
 								<Link href="https://github.com/hawkshail">
 									<IconButton>
 										<GitHubIcon />
@@ -105,7 +95,7 @@ function about() {
 						</Paper>
 					</Grid>
 					<Grid item component="section" xs={12} sm={4}>
-						<Paper>
+						<Paper sx={{ padding: 1 }}>
 							<Typography variant="h2" mb={2}>
 								Gaming
 							</Typography>
@@ -128,7 +118,7 @@ function about() {
 						</Paper>
 					</Grid>
 					<Grid item component="section" xs={12} sm={4}>
-						<Paper>
+						<Paper sx={{ padding: 1 }}>
 							<Typography variant="h2" mb={2}>
 								Airsoft
 							</Typography>
