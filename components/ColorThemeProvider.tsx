@@ -1,11 +1,11 @@
 import React, { useContext, useMemo } from "react";
 
 import { useLocalStorage } from "@/src/hooks/useLocalStorage";
-import { getThemeOptions } from "@/styles/theme";
+import themeLight, { themeDark } from "@/styles/theme";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { IconButton, IconButtonProps, PaletteMode } from "@mui/material";
-import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
+import { ThemeProvider, useTheme } from "@mui/material/styles";
 
 import type { ReactNode } from "react";
 
@@ -34,7 +34,10 @@ export default function ColorThemeProvider({
 		[setMode]
 	);
 
-	const theme = useMemo(() => createTheme(getThemeOptions(mode)), [mode]);
+	const theme = useMemo(
+		() => (mode === "light" ? themeLight : themeDark),
+		[mode]
+	);
 
 	return (
 		<ColorModeContext.Provider value={colorMode}>
