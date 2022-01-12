@@ -34,7 +34,10 @@ function MyApp(props: MyAppProps) {
 			</Head>
 			<ColorThemeProvider>
 				<CssBaseline />
-				<Paper square style={{ minHeight: "100vh" }}>
+				<Paper
+					square
+					sx={{ bgcolor: "background.default", minHeight: "100vh" }}
+				>
 					<Layout>
 						<Container>
 							<Component {...pageProps} />
